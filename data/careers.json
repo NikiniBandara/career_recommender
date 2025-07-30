@@ -1,0 +1,42 @@
+[
+  {
+    "career": "Data Scientist",
+    "skills": ["Python", "Statistics", "Machine Learning"],
+    "interests": ["Math", "Logic", "Technology"],
+    "traits": ["Analytical", "Curious", "Problem-solver"],
+    "courses": ["IBM Data Science (Coursera)", "MIT Data Analysis (edX)"],
+    "description": "Uses data to extract insights, build models, and solve real-world problems."
+  },
+  {
+    "career": "Software Engineer",
+    "skills": ["Python", "Java", "Algorithms"],
+    "interests": ["Coding", "Problem Solving", "Technology"],
+    "traits": ["Logical", "Persistent", "Detail-Oriented"],
+    "courses": ["CS50 (Harvard)", "Full Stack (FreeCodeCamp)"],
+    "description": "Builds applications and systems used in every part of modern life."
+  },
+  {
+    "career": "UX Designer",
+    "skills": ["UI/UX", "Empathy", "Prototyping"],
+    "interests": ["Design", "Psychology", "User Experience"],
+    "traits": ["Creative", "Empathetic", "Observant"],
+    "courses": ["Google UX Design (Coursera)", "Interaction Design (UC San Diego)"],
+    "description": "Designs user-friendly interfaces and experiences for websites and apps."
+  },
+  {
+    "career": "Architect",
+    "skills": ["3D Design", "Math", "Structural Analysis"],
+    "interests": ["Art", "Engineering", "Design"],
+    "traits": ["Visual Thinker", "Detail-Oriented", "Creative"],
+    "courses": ["Architecture Fundamentals (edX)", "ArchDaily Articles"],
+    "description": "Designs physical structures like buildings, bridges, and cities."
+  },
+  {
+    "career": "Civil Engineer",
+    "skills": ["CAD", "Project Management", "Physics"],
+    "interests": ["Construction", "Design", "Infrastructure"],
+    "traits": ["Organized", "Practical", "Structured"],
+    "courses": ["NPTEL Civil Engineering", "Coursera Civil Projects"],
+    "description": "Plans, designs, and oversees construction and maintenance of infrastructure."
+  }
+]
