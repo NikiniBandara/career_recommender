@@ -24,13 +24,17 @@ with st.form("u_input"):
 
     traits = st.multiselect("Or select traits", sorted(traits_options), help="Select traits that describe you.")
 
+    st.subheader("Customize Recommendation Weights")
+    min_score = st.slider("Minimum Match Score", min_value=1.0, max_value=10.0, value=2.0, step=0.5,
+        help="Set the minimum score for a career to be recommended. Higher values return fewer, stronger matches.")
+
     submit = st.form_submit_button("Get Recommendations")
 
     if submit:
         if not free_text and not skills and not interests and not traits:
             st.error("Please give at least one input")
         else:
-            text_in = process_texts(free_text, skills_options, interests_options, traits_options)
+            text_in = process_texts(free_text, skills_options, interests_options, traits_options) #calling process_texts() from recommender.py
 
             user_in = {
                 "skills": list(set(text_in["skills"] + skills)),

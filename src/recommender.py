@@ -4,12 +4,16 @@ from dotenv import load_dotenv
 import os #to interact with the operating system
 import nltk
 from nltk.tokenize import word_tokenize
+from nltk.stem import WordNetLemmatizer #lemmatization
 
 try:
     nltk.download('punkt', quiet=True)
     nltk.download('punkt_tab', quiet=True)
+    nltk.download('wordnet', quiet=True) #lemmatization
 except Exception as e:
     print(f"Error downloading NLTK resources: {e}")
+
+
 
 load_dotenv()
 DATA_PATH = os.getenv("DATA_PATH", "data/careers.json")
@@ -49,10 +53,14 @@ def get_ops_from_careers(): #getting the lists of skills, interests and traits f
 
 
 
-def recommend_career(u_input):
+def recommend_career(u_input, min_score=2):
     """recommend career based on skills, interests, traits"""
     careers = load_careers()
     recommendations = []
+
+    skill_weight = 2
+    interest_weight = 1
+    trait_weight = 1
 
     for career in careers:
         skillmatches = len(set(u_input.get('skills', [])) & set(career['skills'])) #& - finds common elements
@@ -62,12 +70,12 @@ def recommend_career(u_input):
         traitmatches = len(set(u_input.get('traits', [])) & set(career['traits']))
 
         #weighted
-        totalscore = skillmatches * 2 + interestmatches + traitmatches
+        total_score = skillmatches * skill_weight + interestmatches * interest_weight + traitmatches * trait_weight
 
-        if totalscore > 0: #at least one match
+        if total_score >= min_score: #at least one match
             recommendations.append({
                 "career": career['career'],
-                "score": totalscore,
+                "score": total_score,
                 "description": career['description'],
                 "courses": career['courses'],
                 "skills": list(set(u_input.get('skills', [])) & set(career['skills'])),
@@ -75,7 +83,7 @@ def recommend_career(u_input):
                 "traits": list(set(u_input.get('traits', [])) & set(career['traits']))
             })
     
-            print(f"Debug: {career['career']} - Skills: {skillmatches}, Interests: {interestmatches}, Traits: {traitmatches}, Score: {totalscore}")
+            print(f"Debug: {career['career']} - Skills: {skillmatches}, Interests: {interestmatches}, Traits: {traitmatches}, Score: {total_score}")
 
     #sort from score (high to low)
     recommendations.sort(key=lambda x: x['score'], reverse=True)
@@ -92,26 +100,35 @@ def process_texts(text, skills_op, interests_op, traits_op):
     if not text:
         return{"skills": [], "interests": [], "traits": []}
     
+    lemmatizer = WordNetLemmatizer()
     #tokenize text
-    tokens = word_tokenize(text.lower())
+    #tokens = word_tokenize(text.lower())
+    tokens = [lemmatizer.lemmatize(token.lower()) for token in word_tokenize(text.lower())]
 
     #map tokens to predefined options
     skills =[]
     interests = []
     traits = []
 
+
+
     for token in tokens:
         for skill in skills_op:
-            if token in skill.lower(): #check if each token exist in any skill from skills_op
+            #if token in skill.lower(): #check if each token exist in any skill from skills_op
+            if token in lemmatizer.lemmatize(skill.lower()) or token in skill.lower(): #Lemmatizes it (reduces to base/dictionary form, ex: "running" → "run")
                 skills.append(skill) #add the full skill name to skills list if matched
 
         for interest in interests_op:
-            if token in interest.lower():
+            #if token in interest.lower():
+            if token in lemmatizer.lemmatize(interest.lower()) or token in interest.lower():
                 interests.append(interest)
 
         for trait in traits_op:
-            if token in trait.lower() or token == trait.lower().replace("-", " "): #if token matches the trait with hyphens replaced by spaces
+            #if token in trait.lower() or token == trait.lower().replace("-", " "): #if token matches the trait with hyphens replaced by spaces
+            if token in lemmatizer.lemmatize(trait.lower()) or token == trait.lower().replace("-", " "): #.lower() Converts the trait to lowercase
                 traits.append(trait)
+
+
 
     return {
         "skills": list(set(skills)),
