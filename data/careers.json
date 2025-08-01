@@ -1,42 +1,452 @@
 [
   {
     "career": "Data Scientist",
-    "skills": ["Python", "Statistics", "Machine Learning"],
-    "interests": ["Math", "Logic", "Technology"],
-    "traits": ["Analytical", "Curious", "Problem-solver"],
-    "courses": ["IBM Data Science (Coursera)", "MIT Data Analysis (edX)"],
-    "description": "Uses data to extract insights, build models, and solve real-world problems."
+    "skills": ["Python", "Statistics", "Machine Learning", "Data Visualization"],
+    "interests": ["Math", "Logic", "Technology", "Data Analysis"],
+    "traits": ["Analytical", "Curious", "Problem-solver", "Detail-Oriented"],
+    "courses": ["IBM Data Science (Coursera)", "MIT Data Analysis (edX)", "DataCamp Python Track"],
+    "description": "Uses data to extract insights, build models, and solve real-world problems.",
+    "field": "Technology"
   },
   {
     "career": "Software Engineer",
-    "skills": ["Python", "Java", "Algorithms"],
-    "interests": ["Coding", "Problem Solving", "Technology"],
-    "traits": ["Logical", "Persistent", "Detail-Oriented"],
-    "courses": ["CS50 (Harvard)", "Full Stack (FreeCodeCamp)"],
-    "description": "Builds applications and systems used in every part of modern life."
+    "skills": ["Python", "Java", "Algorithms", "Git"],
+    "interests": ["Coding", "Problem Solving", "Technology", "Innovation"],
+    "traits": ["Logical", "Persistent", "Detail-Oriented", "Collaborative"],
+    "courses": ["CS50 (Harvard)", "Full Stack (FreeCodeCamp)", "Udemy Java Bootcamp"],
+    "description": "Builds applications and systems used in every part of modern life.",
+    "field": "Technology"
   },
   {
     "career": "UX Designer",
-    "skills": ["UI/UX", "Empathy", "Prototyping"],
-    "interests": ["Design", "Psychology", "User Experience"],
-    "traits": ["Creative", "Empathetic", "Observant"],
-    "courses": ["Google UX Design (Coursera)", "Interaction Design (UC San Diego)"],
-    "description": "Designs user-friendly interfaces and experiences for websites and apps."
+    "skills": ["UI/UX", "Empathy", "Prototyping", "Wireframing"],
+    "interests": ["Design", "Psychology", "User Experience", "Creativity"],
+    "traits": ["Creative", "Empathetic", "Observant", "Communicative"],
+    "courses": ["Google UX Design (Coursera)", "Interaction Design (UC San Diego)", "Figma Academy"],
+    "description": "Designs user-friendly interfaces and experiences for websites and apps.",
+    "field": "Design"
   },
   {
     "career": "Architect",
-    "skills": ["3D Design", "Math", "Structural Analysis"],
-    "interests": ["Art", "Engineering", "Design"],
-    "traits": ["Visual Thinker", "Detail-Oriented", "Creative"],
-    "courses": ["Architecture Fundamentals (edX)", "ArchDaily Articles"],
-    "description": "Designs physical structures like buildings, bridges, and cities."
+    "skills": ["3D Design", "Math", "Structural Analysis", "CAD"],
+    "interests": ["Art", "Engineering", "Design", "Urban Planning"],
+    "traits": ["Visual Thinker", "Detail-Oriented", "Creative", "Organized"],
+    "courses": ["Architecture Fundamentals (edX)", "ArchDaily Articles", "AutoCAD Masterclass"],
+    "description": "Designs physical structures like buildings, bridges, and cities.",
+    "field": "Architecture"
   },
   {
     "career": "Civil Engineer",
-    "skills": ["CAD", "Project Management", "Physics"],
-    "interests": ["Construction", "Design", "Infrastructure"],
-    "traits": ["Organized", "Practical", "Structured"],
-    "courses": ["NPTEL Civil Engineering", "Coursera Civil Projects"],
-    "description": "Plans, designs, and oversees construction and maintenance of infrastructure."
+    "skills": ["CAD", "Project Management", "Physics", "Structural Analysis"],
+    "interests": ["Construction", "Design", "Infrastructure", "Sustainability"],
+    "traits": ["Organized", "Practical", "Structured", "Analytical"],
+    "courses": ["NPTEL Civil Engineering", "Coursera Civil Projects", "ASCE Webinars"],
+    "description": "Plans, designs, and oversees construction and maintenance of infrastructure.",
+    "field": "Engineering"
+  },
+  {
+    "career": "Mechanical Engineer",
+    "skills": ["CAD", "Thermodynamics", "Mechanics", "Prototyping"],
+    "interests": ["Engineering", "Machines", "Innovation", "Design"],
+    "traits": ["Analytical", "Creative", "Problem-solver", "Detail-Oriented"],
+    "courses": ["SolidWorks (Udemy)", "MIT Mechanics (edX)", "ASME Courses"],
+    "description": "Designs and builds mechanical systems and machinery.",
+    "field": "Engineering"
+  },
+  {
+    "career": "Electrical Engineer",
+    "skills": ["Circuit Design", "Electronics", "Programming", "Power Systems"],
+    "interests": ["Technology", "Energy", "Innovation", "Electronics"],
+    "traits": ["Logical", "Precise", "Innovative", "Analytical"],
+    "courses": ["Coursera Electrical Engineering", "IEEE Courses", "edX Circuits"],
+    "description": "Develops and maintains electrical systems and equipment.",
+    "field": "Engineering"
+  },
+  {
+    "career": "Product Manager",
+    "skills": ["Project Management", "Market Research", "Agile", "Communication"],
+    "interests": ["Business", "Technology", "Strategy", "Innovation"],
+    "traits": ["Strategic", "Collaborative", "Empathetic", "Decisive"],
+    "courses": ["Product Management (Coursera)", "Scrum Master (Udemy)", "PMI Agile"],
+    "description": "Guides product development from ideation to launch, aligning with market needs.",
+    "field": "Business"
+  },
+  {
+    "career": "Graphic Designer",
+    "skills": ["Adobe Photoshop", "Typography", "Branding", "Illustration"],
+    "interests": ["Art", "Design", "Creativity", "Visual Storytelling"],
+    "traits": ["Creative", "Detail-Oriented", "Visual Thinker", "Adaptable"],
+    "courses": ["Adobe Creative Cloud (Udemy)", "Graphic Design (Coursera)", "Skillshare Design"],
+    "description": "Creates visual content for branding, marketing, and media.",
+    "field": "Design"
+  },
+  {
+    "career": "Cybersecurity Analyst",
+    "skills": ["Network Security", "Penetration Testing", "Cryptography", "Risk Assessment"],
+    "interests": ["Technology", "Security", "Problem Solving", "Ethics"],
+    "traits": ["Analytical", "Detail-Oriented", "Ethical", "Persistent"],
+    "courses": ["CompTIA Security+ (Udemy)", "Cybrary Cybersecurity", "Coursera Cybersecurity"],
+    "description": "Protects systems and data from cyber threats and vulnerabilities.",
+    "field": "Technology"
+  },
+  {
+    "career": "Biomedical Engineer",
+    "skills": ["Biomechanics", "Medical Devices", "Programming", "Biology"],
+    "interests": ["Healthcare", "Engineering", "Innovation", "Science"],
+    "traits": ["Innovative", "Empathetic", "Analytical", "Detail-Oriented"],
+    "courses": ["Bioengineering (edX)", "Coursera Biomedical Engineering", "MIT OpenCourseWare"],
+    "description": "Designs medical devices and technologies to improve healthcare.",
+    "field": "Engineering"
+  },
+  {
+    "career": "Financial Analyst",
+    "skills": ["Financial Modeling", "Excel", "Statistics", "Market Analysis"],
+    "interests": ["Finance", "Economics", "Data Analysis", "Investing"],
+    "traits": ["Analytical", "Detail-Oriented", "Logical", "Organized"],
+    "courses": ["CFA Prep (Coursera)", "Financial Modeling (Udemy)", "edX Finance"],
+    "description": "Evaluates financial data to guide investment and business decisions.",
+    "field": "Finance"
+  },
+  {
+    "career": "Environmental Scientist",
+    "skills": ["Data Analysis", "Ecology", "GIS", "Field Research"],
+    "interests": ["Environment", "Sustainability", "Science", "Conservation"],
+    "traits": ["Curious", "Ethical", "Analytical", "Collaborative"],
+    "courses": ["Environmental Science (Coursera)", "GIS Mapping (Udemy)", "edX Sustainability"],
+    "description": "Studies environmental issues to promote sustainability and conservation.",
+    "field": "Science"
+  },
+  {
+    "career": "Marketing Manager",
+    "skills": ["Digital Marketing", "SEO", "Branding", "Analytics"],
+    "interests": ["Business", "Creativity", "Communication", "Strategy"],
+    "traits": ["Creative", "Strategic", "Communicative", "Adaptable"],
+    "courses": ["Google Digital Marketing (Coursera)", "HubSpot Academy", "Udemy SEO"],
+    "description": "Develops strategies to promote products and services to target audiences.",
+    "field": "Business"
+  },
+  {
+    "career": "Aerospace Engineer",
+    "skills": ["Aerodynamics", "CAD", "Physics", "Simulation"],
+    "interests": ["Aviation", "Space", "Engineering", "Innovation"],
+    "traits": ["Analytical", "Innovative", "Detail-Oriented", "Logical"],
+    "courses": ["Aerospace Engineering (edX)", "Coursera Spacecraft Dynamics", "MIT Aeronautics"],
+    "description": "Designs aircraft, spacecraft, and related systems.",
+    "field": "Engineering"
+  },
+  {
+    "career": "Clinical Psychologist",
+    "skills": ["Counseling", "Empathy", "Research", "Assessment"],
+    "interests": ["Psychology", "Mental Health", "Helping Others", "Research"],
+    "traits": ["Empathetic", "Patient", "Analytical", "Communicative"],
+    "courses": ["Psychology (Coursera)", "edX Clinical Psychology", "APA Webinars"],
+    "description": "Diagnoses and treats mental health disorders through therapy and assessment.",
+    "field": "Healthcare"
+  },
+  {
+    "career": "Robotics Engineer",
+    "skills": ["Robotics", "Programming", "Mechanics", "AI"],
+    "interests": ["Technology", "Automation", "Engineering", "Innovation"],
+    "traits": ["Innovative", "Analytical", "Creative", "Persistent"],
+    "courses": ["Robotics (Coursera)", "Udemy ROS", "edX Robotics"],
+    "description": "Designs and builds robots for automation and industrial applications.",
+    "field": "Engineering"
+  },
+  {
+    "career": "Urban Planner",
+    "skills": ["GIS", "Urban Design", "Policy Analysis", "Community Engagement"],
+    "interests": ["Urban Planning", "Sustainability", "Design", "Community"],
+    "traits": ["Visionary", "Collaborative", "Analytical", "Organized"],
+    "courses": ["Urban Planning (edX)", "Coursera Smart Cities", "APA Planning Courses"],
+    "description": "Plans and designs urban spaces to enhance community living.",
+    "field": "Urban Planning"
+  },
+  {
+    "career": "Game Developer",
+    "skills": ["Unity", "C#", "3D Modeling", "Game Design"],
+    "interests": ["Gaming", "Technology", "Creativity", "Storytelling"],
+    "traits": ["Creative", "Detail-Oriented", "Collaborative", "Innovative"],
+    "courses": ["Unity Game Development (Udemy)", "Coursera Game Design", "GDC Vault"],
+    "description": "Creates interactive video games for various platforms.",
+    "field": "Technology"
+  },
+  {
+    "career": "Chemical Engineer",
+    "skills": ["Chemistry", "Process Engineering", "Math", "Simulation"],
+    "interests": ["Science", "Engineering", "Innovation", "Sustainability"],
+    "traits": ["Analytical", "Precise", "Innovative", "Detail-Oriented"],
+    "courses": ["Chemical Engineering (edX)", "Coursera Process Engineering", "AIChE Courses"],
+    "description": "Develops processes for producing chemicals, fuels, and pharmaceuticals.",
+    "field": "Engineering"
+  },
+  {
+    "career": "Network Administrator",
+    "skills": ["Networking", "Troubleshooting", "Security", "Linux"],
+    "interests": ["Technology", "Infrastructure", "Problem Solving", "Systems"],
+    "traits": ["Analytical", "Detail-Oriented", "Organized", "Proactive"],
+    "courses": ["Cisco CCNA (Udemy)", "Coursera Networking", "CompTIA Network+"],
+    "description": "Manages and maintains computer networks and systems.",
+    "field": "Technology"
+  },
+  {
+    "career": "Physicist",
+    "skills": ["Physics", "Math", "Research", "Data Analysis"],
+    "interests": ["Science", "Discovery", "Math", "Theory"],
+    "traits": ["Curious", "Analytical", "Logical", "Persistent"],
+    "courses": ["Quantum Physics (edX)", "Coursera Physics", "MIT OpenCourseWare"],
+    "description": "Studies physical phenomena to advance scientific understanding.",
+    "field": "Science"
+  },
+  {
+    "career": "Industrial Designer",
+    "skills": ["3D Design", "Prototyping", "CAD", "Aesthetics"],
+    "interests": ["Design", "Innovation", "Products", "Creativity"],
+    "traits": ["Creative", "Visual Thinker", "Detail-Oriented", "Innovative"],
+    "courses": ["Industrial Design (Coursera)", "SolidWorks (Udemy)", "edX Product Design"],
+    "description": "Designs consumer products with a focus on functionality and aesthetics.",
+    "field": "Design"
+  },
+  {
+    "career": "Data Engineer",
+    "skills": ["SQL", "ETL", "Big Data", "Python"],
+    "interests": ["Data", "Technology", "Infrastructure", "Analytics"],
+    "traits": ["Analytical", "Organized", "Detail-Oriented", "Logical"],
+    "courses": ["Data Engineering (Coursera)", "Udemy Big Data", "edX Data Pipelines"],
+    "description": "Builds and maintains data pipelines and infrastructure for analytics.",
+    "field": "Technology"
+  },
+  {
+    "career": "AI Research Scientist",
+    "skills": ["Machine Learning", "Python", "Deep Learning", "Math"],
+    "interests": ["AI", "Technology", "Innovation", "Research"],
+    "traits": ["Curious", "Analytical", "Innovative", "Persistent"],
+    "courses": ["Deep Learning (Coursera)", "Stanford AI (edX)", "Fast.ai Courses"],
+    "description": "Researches and develops advanced AI algorithms and models.",
+    "field": "Technology"
+  },
+  {
+    "career": "Supply Chain Manager",
+    "skills": ["Logistics", "Analytics", "Project Management", "Negotiation"],
+    "interests": ["Business", "Operations", "Efficiency", "Strategy"],
+    "traits": ["Organized", "Strategic", "Analytical", "Communicative"],
+    "courses": ["Supply Chain (Coursera)", "APICS CSCP", "Udemy Logistics"],
+    "description": "Oversees the flow of goods and services to optimize efficiency.",
+    "field": "Business"
+  },
+  {
+    "career": "Geologist",
+    "skills": ["Field Research", "Geophysics", "Data Analysis", "GIS"],
+    "interests": ["Earth Science", "Environment", "Exploration", "Research"],
+    "traits": ["Curious", "Analytical", "Detail-Oriented", "Resilient"],
+    "courses": ["Geology (edX)", "Coursera Earth Science", "USGS Training"],
+    "description": "Studies Earth's materials and processes to understand its history.",
+    "field": "Science"
+  },
+  {
+    "career": "Human Resources Manager",
+    "skills": ["Recruitment", "Communication", "Conflict Resolution", "Analytics"],
+    "interests": ["People", "Business", "Organizational Development", "Leadership"],
+    "traits": ["Empathetic", "Communicative", "Organized", "Ethical"],
+    "courses": ["HR Management (Coursera)", "SHRM Certification", "Udemy HR"],
+    "description": "Manages hiring, training, and employee relations in organizations.",
+    "field": "Business"
+  },
+  {
+    "career": "Interior Designer",
+    "skills": ["3D Design", "Aesthetics", "Space Planning", "CAD"],
+    "interests": ["Design", "Art", "Creativity", "Architecture"],
+    "traits": ["Creative", "Visual Thinker", "Detail-Oriented", "Collaborative"],
+    "courses": ["Interior Design (Coursera)", "AutoCAD (Udemy)", "edX Space Planning"],
+    "description": "Designs functional and aesthetically pleasing indoor spaces.",
+    "field": "Design"
+  },
+  {
+    "career": "DevOps Engineer",
+    "skills": ["Cloud Computing", "CI/CD", "Linux", "Scripting"],
+    "interests": ["Technology", "Automation", "Infrastructure", "Innovation"],
+    "traits": ["Collaborative", "Analytical", "Proactive", "Detail-Oriented"],
+    "courses": ["AWS DevOps (Udemy)", "Coursera DevOps", "Linux Academy"],
+    "description": "Automates and manages software development and IT operations.",
+    "field": "Technology"
+  },
+  {
+    "career": "Registered Nurse",
+    "skills": ["Patient Care", "Medical Knowledge", "Empathy", "Critical Thinking"],
+    "interests": ["Healthcare", "Helping Others", "Science", "Patient Advocacy"],
+    "traits": ["Empathetic", "Resilient", "Detail-Oriented", "Compassionate"],
+    "courses": ["Nursing (Coursera)", "NCLEX Prep (Udemy)", "edX Healthcare"],
+    "description": "Provides patient care and coordinates treatment in healthcare settings.",
+    "field": "Healthcare"
+  },
+  {
+    "career": "Blockchain Developer",
+    "skills": ["Solidity", "Cryptography", "Smart Contracts", "Python"],
+    "interests": ["Technology", "Finance", "Innovation", "Security"],
+    "traits": ["Innovative", "Analytical", "Detail-Oriented", "Logical"],
+    "courses": ["Blockchain (Coursera)", "Udemy Solidity", "edX Cryptocurrency"],
+    "description": "Develops decentralized applications using blockchain technology.",
+    "field": "Technology"
+  },
+  {
+    "career": "Economist",
+    "skills": ["Statistics", "Econometrics", "Data Analysis", "Research"],
+    "interests": ["Economics", "Policy", "Data", "Society"],
+    "traits": ["Analytical", "Curious", "Logical", "Detail-Oriented"],
+    "courses": ["Econometrics (edX)", "Coursera Economics", "Khan Academy"],
+    "description": "Analyzes economic data to inform policy and business decisions.",
+    "field": "Economics"
+  },
+  {
+    "career": "Content Strategist",
+    "skills": ["Content Creation", "SEO", "Analytics", "Writing"],
+    "interests": ["Marketing", "Storytelling", "Communication", "Creativity"],
+    "traits": ["Creative", "Strategic", "Communicative", "Organized"],
+    "courses": ["Content Marketing (HubSpot)", "Coursera Content Strategy", "Udemy SEO"],
+    "description": "Plans and manages content to align with brand and marketing goals.",
+    "field": "Marketing"
+  },
+  {
+    "career": "Renewable Energy Engineer",
+    "skills": ["Energy Systems", "Physics", "CAD", "Sustainability"],
+    "interests": ["Environment", "Engineering", "Innovation", "Sustainability"],
+    "traits": ["Innovative", "Analytical", "Practical", "Visionary"],
+    "courses": ["Renewable Energy (edX)", "Coursera Solar Energy", "IRENA Courses"],
+    "description": "Designs and implements renewable energy solutions like solar and wind.",
+    "field": "Engineering"
+  },
+  {
+    "career": "Pharmacist",
+    "skills": ["Pharmacology", "Patient Counseling", "Chemistry", "Attention to Detail"],
+    "interests": ["Healthcare", "Science", "Helping Others", "Medicine"],
+    "traits": ["Empathetic", "Detail-Oriented", "Ethical", "Organized"],
+    "courses": ["Pharmacy (Coursera)", "PharmD Prep (Udemy)", "edX Pharmacology"],
+    "description": "Dispenses medications and advises on their safe use.",
+    "field": "Healthcare"
+  },
+  {
+    "career": "Business Analyst",
+    "skills": ["Requirements Gathering", "Data Analysis", "Process Modeling", "Communication"],
+    "interests": ["Business", "Technology", "Problem Solving", "Strategy"],
+    "traits": ["Analytical", "Communicative", "Detail-Oriented", "Logical"],
+    "courses": ["Business Analysis (Coursera)", "CBAP Prep (Udemy)", "edX Analytics"],
+    "description": "Analyzes business processes to improve efficiency and outcomes.",
+    "field": "Business"
+  },
+  {
+    "career": "Animation Artist",
+    "skills": ["Animation", "3D Modeling", "Storyboarding", "Adobe After Effects"],
+    "interests": ["Art", "Storytelling", "Creativity", "Technology"],
+    "traits": ["Creative", "Visual Thinker", "Detail-Oriented", "Patient"],
+    "courses": ["Animation (Coursera)", "Blender (Udemy)", "Skillshare Animation"],
+    "description": "Creates animated content for films, games, and media.",
+    "field": "Design"
+  },
+  {
+    "career": "Marine Biologist",
+    "skills": ["Marine Science", "Field Research", "Data Analysis", "Biology"],
+    "interests": ["Ocean", "Science", "Conservation", "Environment"],
+    "traits": ["Curious", "Analytical", "Resilient", "Passionate"],
+    "courses": ["Marine Biology (edX)", "Coursera Oceanography", "NOAA Training"],
+    "description": "Studies marine life and ecosystems to promote conservation.",
+    "field": "Science"
+  },
+  {
+    "career": "Project Manager",
+    "skills": ["Project Planning", "Leadership", "Risk Management", "Communication"],
+    "interests": ["Business", "Leadership", "Organization", "Strategy"],
+    "traits": ["Organized", "Decisive", "Collaborative", "Strategic"],
+    "courses": ["PMP Certification (Udemy)", "Coursera Project Management", "PMI Courses"],
+    "description": "Leads projects to ensure timely and successful completion.",
+    "field": "Business"
+  },
+  {
+    "career": "AI Ethics Specialist",
+    "skills": ["Ethics", "AI", "Policy Analysis", "Critical Thinking"],
+    "interests": ["Technology", "Ethics", "Society", "Innovation"],
+    "traits": ["Ethical", "Analytical", "Communicative", "Visionary"],
+    "courses": ["AI Ethics (Coursera)", "edX AI Policy", "Stanford AI Ethics"],
+    "description": "Ensures AI systems are developed and used responsibly.",
+    "field": "Technology"
+  },
+  {
+    "career": "Logistics Coordinator",
+    "skills": ["Logistics", "Supply Chain", "Organization", "Communication"],
+    "interests": ["Business", "Operations", "Efficiency", "Transportation"],
+    "traits": ["Organized", "Detail-Oriented", "Proactive", "Collaborative"],
+    "courses": ["Logistics (Coursera)", "APICS CLTD", "Udemy Supply Chain"],
+    "description": "Coordinates the movement of goods and services efficiently.",
+    "field": "Business"
+  },
+  {
+    "career": "Web Developer",
+    "skills": ["HTML", "CSS", "JavaScript", "React"],
+    "interests": ["Technology", "Design", "Coding", "Innovation"],
+    "traits": ["Creative", "Detail-Oriented", "Logical", "Adaptable"],
+    "courses": ["Web Development (FreeCodeCamp)", "Coursera Frontend", "Udemy React"],
+    "description": "Builds and maintains websites and web applications.",
+    "field": "Technology"
+  },
+  {
+    "career": "Forensic Scientist",
+    "skills": ["Forensic Analysis", "Chemistry", "Data Analysis", "Critical Thinking"],
+    "interests": ["Science", "Crime", "Investigation", "Justice"],
+    "traits": ["Analytical", "Detail-Oriented", "Ethical", "Curious"],
+    "courses": ["Forensic Science (Coursera)", "edX Forensics", "NFSTC Courses"],
+    "description": "Analyzes evidence to assist in criminal investigations.",
+    "field": "Science"
+  },
+  {
+    "career": "Public Relations Specialist",
+    "skills": ["Communication", "Media Relations", "Writing", "Branding"],
+    "interests": ["Marketing", "Communication", "Public Image", "Strategy"],
+    "traits": ["Communicative", "Creative", "Strategic", "Adaptable"],
+    "courses": ["PR (Coursera)", "HubSpot PR", "Udemy Media Relations"],
+    "description": "Manages public image and communications for organizations.",
+    "field": "Marketing"
+  },
+  {
+    "career": "Structural Engineer",
+    "skills": ["Structural Analysis", "CAD", "Math", "Physics"],
+    "interests": ["Engineering", "Construction", "Design", "Infrastructure"],
+    "traits": ["Analytical", "Detail-Oriented", "Practical", "Logical"],
+    "courses": ["Structural Engineering (edX)", "Coursera Mechanics", "ASCE Courses"],
+    "description": "Designs and analyzes structures to ensure safety and stability.",
+    "field": "Engineering"
+  },
+  {
+    "career": "Technical Writer",
+    "skills": ["Writing", "Documentation", "Research", "Communication"],
+    "interests": ["Technology", "Writing", "Clarity", "Education"],
+    "traits": ["Detail-Oriented", "Communicative", "Organized", "Analytical"],
+    "courses": ["Technical Writing (Coursera)", "Udemy Documentation", "edX Writing"],
+    "description": "Creates clear and concise documentation for technical products.",
+    "field": "Communication"
+  },
+  {
+    "career": "Wildlife Biologist",
+    "skills": ["Field Research", "Ecology", "Data Analysis", "Conservation"],
+    "interests": ["Wildlife", "Environment", "Science", "Conservation"],
+    "traits": ["Curious", "Resilient", "Analytical", "Passionate"],
+    "courses": ["Wildlife Biology (edX)", "Coursera Ecology", "WWF Training"],
+    "description": "Studies animals and their habitats to promote conservation.",
+    "field": "Science"
+  },
+  {
+    "career": "Cloud Architect",
+    "skills": ["Cloud Computing", "AWS", "Azure", "Architecture"],
+    "interests": ["Technology", "Infrastructure", "Innovation", "Systems"],
+    "traits": ["Strategic", "Analytical", "Innovative", "Detail-Oriented"],
+    "courses": ["AWS Architect (Udemy)", "Coursera Cloud Computing", "Azure Certification"],
+    "description": "Designs and manages cloud-based systems and infrastructure.",
+    "field": "Technology"
+  },
+  {
+    "career": "Occupational Therapist",
+    "skills": ["Patient Care", "Therapy", "Empathy", "Assessment"],
+    "interests": ["Healthcare", "Helping Others", "Rehabilitation", "Wellness"],
+    "traits": ["Empathetic", "Patient", "Creative", "Compassionate"],
+    "courses": ["Occupational Therapy (Coursera)", "edX Rehabilitation", "AOTA Courses"],
+    "description": "Helps patients regain skills for daily living and working.",
+    "field": "Healthcare"
   }
 ]

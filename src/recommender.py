@@ -136,6 +136,11 @@ def process_texts(text, skills_op, interests_op, traits_op):
         "traits": list(set(traits))
     }
 
+"""
+Lowercasing: text.lower() ensures case-insensitive matching.
+Tokenization: word_tokenize() splits the text into individual words/tokens.
+Lemmatization: WordNetLemmatizer() reduces words to their base/dictionary form
+"""
 
 
 
