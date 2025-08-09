@@ -5,6 +5,7 @@ import os #to interact with the operating system
 import nltk
 from nltk.tokenize import word_tokenize
 from nltk.stem import WordNetLemmatizer #lemmatization
+from fuzzywuzzy import fuzz
 
 try:
     nltk.download('punkt', quiet=True)
@@ -21,6 +22,7 @@ DATA_PATH = os.getenv("DATA_PATH", "data/careers.json")
 
 def load_careers():
     """Load careers from JSON file."""
+    
     with open(DATA_PATH, 'r') as f:
         return json.load(f) #parse JSON file (f) into a Python object
 
@@ -38,22 +40,24 @@ def display_careers():
 """
 
 def get_ops_from_careers(): #getting the lists of skills, interests and traits from the existing data (form all careers)
-    """Extract unique skills, interests, and traits from careers.json."""
+    """Extract unique skills, interests, traits and fields from careers.json."""
     careers = load_careers()
     skills = set()
     interests = set()
     traits = set()
+    fields = set()
 
     for career in careers:
         skills.update(career.get('skills', []))
         interests.update(career.get('interests', []))
         traits.update(career.get('traits', []))
+        fields.add(career.get('field', 'other')) #default to 'other'
 
-    return list(skills), list(interests), list(traits)
+    return list(skills), list(interests), list(traits), list(fields)
 
 
 
-def recommend_career(u_input, min_score=2):
+def recommend_career(u_input, min_score=2, fields=None):
     """recommend career based on skills, interests, traits"""
     careers = load_careers()
     recommendations = []
@@ -62,7 +66,18 @@ def recommend_career(u_input, min_score=2):
     interest_weight = 1
     trait_weight = 1
 
+    print(f"Received fields: {fields}")  # Debug
     for career in careers:
+        career_field = career.get('field', 'other')
+        print(f"Checking career: {career['career']}, Field: {career_field}, Selected fields: {fields}")
+
+        #If fields exists and is non-empty - and - If the career's field is NOT in fields
+        #if fields and career.get('field', 'other') not in fields: 
+
+        if fields and career_field not in fields:
+            print(f"Skipping {career['career']} (field: {career_field})")
+            continue #If both conditions are true, the career is skipped
+
         skillmatches = len(set(u_input.get('skills', [])) & set(career['skills'])) #& - finds common elements
 
         interestmatches = len(set(u_input.get('interests', [])) & set(career['interests']))
@@ -80,7 +95,8 @@ def recommend_career(u_input, min_score=2):
                 "courses": career['courses'],
                 "skills": list(set(u_input.get('skills', [])) & set(career['skills'])),
                 "interests": list(set(u_input.get('interests', [])) & set(career['interests'])),
-                "traits": list(set(u_input.get('traits', [])) & set(career['traits']))
+                "traits": list(set(u_input.get('traits', [])) & set(career['traits'])),
+                "field": career.get('field', 'Other')
             })
     
             print(f"Debug: {career['career']} - Skills: {skillmatches}, Interests: {interestmatches}, Traits: {traitmatches}, Score: {total_score}")
@@ -110,22 +126,32 @@ def process_texts(text, skills_op, interests_op, traits_op):
     interests = []
     traits = []
 
-
+    FUZZY_THRESHOLD = 80  # Similarity score threshold (0-100)
 
     for token in tokens:
         for skill in skills_op:
             #if token in skill.lower(): #check if each token exist in any skill from skills_op
-            if token in lemmatizer.lemmatize(skill.lower()) or token in skill.lower(): #Lemmatizes it (reduces to base/dictionary form, ex: "running" → "run")
+            skill_lower = lemmatizer.lemmatize(skill.lower()) #Lemmatizes it (reduces to base/dictionary form, ex: "running" → "run")
+            if (token in skill_lower or fuzz.ratio(token, skill_lower) >= FUZZY_THRESHOLD or
+                fuzz.partial_ratio(token, skill_lower) >= FUZZY_THRESHOLD):
+             
                 skills.append(skill) #add the full skill name to skills list if matched
 
         for interest in interests_op:
             #if token in interest.lower():
-            if token in lemmatizer.lemmatize(interest.lower()) or token in interest.lower():
+            interest_lower = lemmatizer.lemmatize(interest.lower())
+            if (token in interest_lower or fuzz.ratio(token, interest_lower) >= FUZZY_THRESHOLD or
+                fuzz.partial_ratio(token, interest_lower) >= FUZZY_THRESHOLD):
+
                 interests.append(interest)
 
         for trait in traits_op:
             #if token in trait.lower() or token == trait.lower().replace("-", " "): #if token matches the trait with hyphens replaced by spaces
-            if token in lemmatizer.lemmatize(trait.lower()) or token == trait.lower().replace("-", " "): #.lower() Converts the trait to lowercase
+            trait_lower = lemmatizer.lemmatize(trait.lower())
+            if (token in trait_lower or token == trait_lower.replace("-", " ") or
+                fuzz.ratio(token, trait_lower) >= FUZZY_THRESHOLD or
+                fuzz.partial_ratio(token, trait_lower) >= FUZZY_THRESHOLD):
+             #.lower() Converts the trait to lowercase
                 traits.append(trait)
 
 
@@ -147,7 +173,7 @@ Lemmatization: WordNetLemmatizer() reduces words to their base/dictionary form
 
 if __name__ == "__main__":
 
-    skills, interests, traits = get_ops_from_careers()
+    skills, interests, traits, fields = get_ops_from_careers()
 
     # Test 
     free_text = "I like coding, math"
